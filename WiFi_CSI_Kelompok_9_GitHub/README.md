@@ -164,24 +164,5 @@ git remote add origin https://github.com/USERNAME/wifi-csi-indoor-localization-k
 git push -u origin main
 ```
 
-Ganti `USERNAME` dengan username GitHub sendiri. Bila `git commit` meminta identitas, lakukan `git config --global user.name "Nama Kamu"` dan `git config --global user.email "emailkamu@example.com"`, kemudian ulangi commit. Autentikasi `git push` pada GitHub biasanya membuka login browser / meminta kredensial Git Credential Manager; password akun biasa tidak digunakan sebagai password HTTPS Git.
 
-**Alternatif tanpa Git CLI:** di halaman repositori baru, gunakan **Add file → Upload files**, lalu **seret seluruh file dan folder hasil ekstrak** (bukan mengunggah file ZIP saja), pastikan folder `src`, `tests`, `notebooks` ikut. Jangan unggah data/raw CSV, checkpoint pribadi, atau berkas sensitif.
 
-## Checklist persyaratan 30%
-
-- [x] Repositori berisi struktur kode yang dapat dijalankan.
-- [x] `requirements.txt`.
-- [x] `README.md` dan panduan Windows/Colab.
-- [x] `src/preprocessing.py`: filtering + phase sanitization + noise handling.
-- [x] `src/models.py`: implementasi MLP dan CNN-LSTM PyTorch.
-- [x] `train.py`: script training + checkpoint.
-- [x] `evaluate.py`: script evaluasi + grafik dan Confusion Matrix.
-- [x] `ablation.py`: pengujian filter.
-- [x] Notebook original untuk jejak eksperimen.
-- [ ] Repositori GitHub **benar-benar dibuat dan diunggah** oleh anggota kelompok.
-- [ ] URL repo dicantumkan pada laporan/pengumpulan.
-
-## Keterbatasan
-
-Jumlah sampel relatif kecil, sinyal berasal dari subset demo CSV, posisi berlabel grid, proses sanitasi fase belum sepenuhnya mengoreksi offset fisik perangkat, dan evaluasi zona merupakan transformasi hasil regresi. Klaim hasil hanya untuk subset dan split yang dievaluasi. Tidak ada integrasi pengambilan sinyal live.
