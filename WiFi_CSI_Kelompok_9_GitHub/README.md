@@ -123,7 +123,7 @@ Pada run baru, nilai statistik tidak dijamin identik dengan angka sebelumnya mes
 10. **Evaluasi zona**: klasifikasi empat zona **diturunkan dari koordinat regresi** dengan batas X=4.5, Y=4.5; gambar Confusion Matrix adalah evaluasi tambahan, bukan model klasifikasi tersendiri.
 11. **Ablation**: MLP dengan vs tanpa Butterworth, split sama, epoch sama, seed training ablation 2026, normalisasi dihitung masing-masing dari data training skenario.
 
-## Hasil pada notebook yang dilaporkan (eksperimen final 19 Okt 2026)
+## Hasil pada notebook yang dilaporkan 
 
 | Model | Mean error (grid) | Median (grid) | P90 (grid) | Akurasi zona |
 |---|---:|---:|---:|---:|
@@ -146,23 +146,9 @@ Angka di atas merupakan **hasil notebook yang diberikan**, bukan metrik dari skr
 - `artifacts/results/loss_comparison.png`: loss training dan validasi.
 - `artifacts/results/ablation_mlp_filter.csv` dan grafik ablation.
 
-Grafik yang sudah diproduksi di notebook Colab dapat dilampirkan melalui hasil ZIP dari Colab. Folder `artifacts` dan `data/raw` sengaja tidak ikut `git add` supaya repositori tetap ringan dan tidak menduplikasi dataset pihak ketiga.
+Grafik yang sudah ada di notebook Colab dapat dilampirkan melalui hasil ZIP dari Colab. Folder `artifacts` dan `data/raw` sengaja tidak ikut `git add` supaya repositori tetap ringan dan tidak menduplikasi dataset pihak ketiga.
 
-## Mengunggah proyek ini ke GitHub
 
-1. Masuk [github.com](https://github.com), klik tanda **+** → **New repository**.
-2. Isi **Repository name:** `wifi-csi-indoor-localization-kelompok-9`, pilih **Public** atau **Private** sesuai arahan dosen.
-3. Karena ZIP ini **sudah berisi** `README.md` dan `.gitignore`, **jangan** centang opsi GitHub untuk membuat file tersebut (agar langkah Git di bawah mudah).
-4. Setelah repositori dibuat, di PowerShell dari dalam folder hasil ekstrak jalankan:
-
-```powershell
-git init
-git add .
-git commit -m "Initial commit: WiFi CSI localization MLP vs CNN-LSTM"
-git branch -M main
-git remote add origin https://github.com/USERNAME/wifi-csi-indoor-localization-kelompok-9.git
-git push -u origin main
-```
 
 
 
